@@ -38,7 +38,6 @@ public class Main {
                     3. Buscar por titulo
                     4. Buscar por genero
                     5. Ver populares
-                    6. Reproducir
                     8. Eliminar
                     9. Salir
                     """);
@@ -111,6 +110,15 @@ public class Main {
     }
 
     private static void cargarPeliculas(Plataforma plataforma) {
+        try {
+            List<String> lineas = Files.readAllLines(Paths.get("contenido.txt");
+            lineas.forEach(linea -> {
+                System.out.println(linea);
+            })
+        } catch (IOException ex) {
+            System.out.println("Error al leer el archivo." + e.getMessage());
+        }
+
         plataforma.agregar(new Pelicula("Shrek", 90, Genero.ANIMADA));
         plataforma.agregar(new Pelicula("Inception", 148, Genero.CIENCIA_FICCION));
         plataforma.agregar(new Pelicula("Titanic", 195, Genero.DRAMA, 4.6));
